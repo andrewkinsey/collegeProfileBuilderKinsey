@@ -128,6 +128,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-hD-06y">
+                                <rect key="frame" x="170" y="384" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="2d8-xd-SEe" eventType="touchUpInside" id="1Tn-YY-HN6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,6 +142,8 @@
                             <constraint firstItem="dei-vk-tQi" firstAttribute="top" secondItem="a3X-nK-vfP" secondAttribute="bottom" constant="20" id="5qd-L2-6XT"/>
                             <constraint firstItem="dei-vk-tQi" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="8dD-Td-BuV"/>
                             <constraint firstItem="34z-5r-MjM" firstAttribute="top" secondItem="pi3-3c-NmD" secondAttribute="bottom" constant="20" id="DOa-mc-dHN"/>
+                            <constraint firstItem="RCn-hD-06y" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="Nzh-yI-pwc"/>
+                            <constraint firstItem="RCn-hD-06y" firstAttribute="top" secondItem="dei-vk-tQi" secondAttribute="bottom" constant="20" id="aJj-Qn-qz3"/>
                             <constraint firstItem="pi3-3c-NmD" firstAttribute="top" secondItem="ihd-7f-U90" secondAttribute="bottom" constant="20" id="bVD-tt-w6w"/>
                             <constraint firstItem="a3X-nK-vfP" firstAttribute="top" secondItem="34z-5r-MjM" secondAttribute="bottom" constant="20" id="hRy-Q2-zXm"/>
                             <constraint firstItem="a3X-nK-vfP" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="nS7-FT-eRD"/>

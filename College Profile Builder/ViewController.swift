@@ -88,5 +88,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         detailView.detailCollege = myCollegeObject[selectedRow!]
     }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        myTableView.reloadData()
+    }
 }
 

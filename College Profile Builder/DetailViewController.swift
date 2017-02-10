@@ -26,9 +26,16 @@ class DetailViewController: UIViewController
         nameTextField.text = detailCollege.name
         locationTextField.text = detailCollege.location
         enrollementTextField.text = detailCollege.enrollment
-
         
     }
+    @IBAction func saveButtonTapped(_ sender: Any)
+    {
+        detailCollege.name = nameTextField.text!
+        detailCollege.image = imageView.image
+        detailCollege.location = locationTextField.text!
+        detailCollege.enrollment = enrollementTextField.text!
+    }
 
+    
     
 }
