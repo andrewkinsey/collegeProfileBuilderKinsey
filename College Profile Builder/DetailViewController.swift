@@ -52,7 +52,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func visitWebsiteButton(_ sender: Any)
     {
-        let svc = SFSafariViewController(url: detailCollege.webAdress!)
+        let svc = SFSafariViewController(url: URL(string: webAdressTextField.text!)!)
         present(svc, animated: true, completion: nil)
     }
     
