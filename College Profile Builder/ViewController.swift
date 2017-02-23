@@ -19,11 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myCollegeObject.append(CollegeClass(Name: "Harvard", Location: "Massachuchetes", Enrollment: "22,000", Image: UIImage(named: "harvard")!))
-        myCollegeObject.append(CollegeClass(Name: "Yale", Location: "Connecticut", Enrollment: "12,400", Image: UIImage(named: "yale")!))
-        myCollegeObject.append(CollegeClass(Name: "Oxford", Location: "United Kingdom", Enrollment: "22,600", Image: UIImage(named: "oxford")!
+        myCollegeObject.append(CollegeClass(Name: "Harvard", Location: "Massachuchetes", Enrollment: "22,000", Image: UIImage(named: "harvard")!, WebAdress: URL(string: "https://www.harvard.edu")!))
         
-        ))
+        myCollegeObject.append(CollegeClass(Name: "Yale", Location: "Connecticut", Enrollment: "12,400", Image: UIImage(named: "yale")!, WebAdress: URL(string: "https://www.yale.edu")!))
+        
+        myCollegeObject.append(CollegeClass(Name: "Oxford", Location: "United Kingdom", Enrollment: "22,600", Image: UIImage(named: "oxford")!, WebAdress: URL(string: "http://www.ox.ac.uk/")!))
     }
 
     

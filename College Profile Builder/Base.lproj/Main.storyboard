@@ -129,23 +129,52 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-hD-06y">
-                                <rect key="frame" x="170" y="384" width="34" height="30"/>
+                                <rect key="frame" x="170" y="434" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="2d8-xd-SEe" eventType="touchUpInside" id="1Tn-YY-HN6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fyh-5m-Qa4">
+                                <rect key="frame" x="87.5" y="384" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0sT-gk-sHe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V0-1c-pn7">
+                                <rect key="frame" x="143" y="484" width="89" height="30"/>
+                                <state key="normal" title="Visit Website"/>
+                                <connections>
+                                    <action selector="visitWebsiteButton:" destination="2d8-xd-SEe" eventType="touchUpInside" id="w2J-82-K3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-pB-wJk">
+                                <rect key="frame" x="138" y="534" width="99" height="30"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="changeImageButtonTapped:" destination="2d8-xd-SEe" eventType="touchUpInside" id="HFS-pb-mqs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="34z-5r-MjM" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="1jj-eL-zsG"/>
+                            <constraint firstItem="Fyh-5m-Qa4" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="32p-z4-3Rx"/>
+                            <constraint firstItem="Cld-pB-wJk" firstAttribute="top" secondItem="4V0-1c-pn7" secondAttribute="bottom" constant="20" id="4Bw-Vp-xGo"/>
                             <constraint firstItem="dei-vk-tQi" firstAttribute="top" secondItem="a3X-nK-vfP" secondAttribute="bottom" constant="20" id="5qd-L2-6XT"/>
                             <constraint firstItem="dei-vk-tQi" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="8dD-Td-BuV"/>
                             <constraint firstItem="34z-5r-MjM" firstAttribute="top" secondItem="pi3-3c-NmD" secondAttribute="bottom" constant="20" id="DOa-mc-dHN"/>
+                            <constraint firstItem="4V0-1c-pn7" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="Mir-Th-Ebb"/>
                             <constraint firstItem="RCn-hD-06y" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="Nzh-yI-pwc"/>
-                            <constraint firstItem="RCn-hD-06y" firstAttribute="top" secondItem="dei-vk-tQi" secondAttribute="bottom" constant="20" id="aJj-Qn-qz3"/>
+                            <constraint firstItem="RCn-hD-06y" firstAttribute="top" secondItem="Fyh-5m-Qa4" secondAttribute="bottom" constant="20" id="WJm-3h-3eO"/>
                             <constraint firstItem="pi3-3c-NmD" firstAttribute="top" secondItem="ihd-7f-U90" secondAttribute="bottom" constant="20" id="bVD-tt-w6w"/>
+                            <constraint firstItem="4V0-1c-pn7" firstAttribute="top" secondItem="RCn-hD-06y" secondAttribute="bottom" constant="20" id="fmP-1R-H3D"/>
+                            <constraint firstItem="Fyh-5m-Qa4" firstAttribute="top" secondItem="dei-vk-tQi" secondAttribute="bottom" constant="20" id="glG-ds-CNi"/>
                             <constraint firstItem="a3X-nK-vfP" firstAttribute="top" secondItem="34z-5r-MjM" secondAttribute="bottom" constant="20" id="hRy-Q2-zXm"/>
+                            <constraint firstItem="Cld-pB-wJk" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="i3k-jU-VEw"/>
                             <constraint firstItem="a3X-nK-vfP" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="nS7-FT-eRD"/>
                             <constraint firstItem="pi3-3c-NmD" firstAttribute="centerX" secondItem="quA-eB-Qud" secondAttribute="centerX" id="pdK-hY-Oe7"/>
                         </constraints>
@@ -155,6 +184,7 @@
                         <outlet property="imageView" destination="pi3-3c-NmD" id="hZY-oc-abu"/>
                         <outlet property="locationTextField" destination="a3X-nK-vfP" id="R1p-kN-vYo"/>
                         <outlet property="nameTextField" destination="34z-5r-MjM" id="rmI-jg-lhw"/>
+                        <outlet property="webAdressTextField" destination="Fyh-5m-Qa4" id="ejt-aM-h7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBm-Ka-SnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
