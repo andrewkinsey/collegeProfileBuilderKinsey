@@ -42,6 +42,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         detailCollege.location = locationTextField.text!
         detailCollege.enrollment = enrollementTextField.text!
         detailCollege.webAdress = URL(string: webAdressTextField.text!)
+        resignFirstResponder()
     }
 
     func getPhotoLibrary()
@@ -56,7 +57,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(svc, animated: true, completion: nil)
     }
     
-    @IBAction func changeImageButtonTapped(_ sender: Any)
+    @IBAction func changeImageButtonTapped(_ srender: Any)
     {
         getPhotoLibrary()
     }
