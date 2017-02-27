@@ -42,20 +42,63 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             { (locationTextField) in
                 locationTextField.placeholder = "Add College Location Here"
             })
+        alert.addTextField(configurationHandler:
+            { (urlTextField) in
+                urlTextField.placeholder = "Add College URL Here"
+                
+        })
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
         let addAction = UIAlertAction(title: "Add", style: .default, handler:
             { (Action) in
-                let collegeTextField = alert.textFields?[0]
-                let locationTextField = alert.textFields?[1]
-                self.myCollegeObject.append(CollegeClass(Name: (collegeTextField?.text)!, Location: (locationTextField?.text)!))
-                self.myTableView.reloadData()
+                
+                if alert.textFields?[0].text == ""
+                {
+                    let alert = UIAlertController(title: "ERROR", message: "Please Fill in All Text Fields", preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else
+                {
+                    if alert.textFields?[1].text == ""
+                    {
+                        let alert = UIAlertController(title: "ERROR", message: "Please Fill in All Text Fields", preferredStyle: .alert)
+                        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alert.addAction(cancelAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    else
+                    {
+                        if alert.textFields?[2].text == ""
+                        {
+                            let alert = UIAlertController(title: "ERROR", message: "Please Fill in All Text Fields", preferredStyle: .alert)
+                            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                            alert.addAction(cancelAction)
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                        else
+                        {
+                            
+                        let collegeTextField = alert.textFields?[0]
+                        let locationTextField = alert.textFields?[1]
+                        let urlTextField = alert.textFields?[2]
+                        self.myCollegeObject.append(CollegeClass(Name: (collegeTextField?.text)!, Location: (locationTextField?.text)!, Enrollment: "", Image: UIImage(named: "default")!, WebAdress: URL(string: (urlTextField?.text)!)!))
+                        self.myTableView.reloadData()
+                            
+                        }
+                    }
+                }
+                
+                
             })
         alert.addAction(addAction)
-        
-        present(alert, animated: true, completion: nil)
-        
+        present(alert, animated: true)
+        {
+            self.myTableView.reloadData()
+        }
     }
     
     
