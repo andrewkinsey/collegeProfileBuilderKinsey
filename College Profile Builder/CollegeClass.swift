@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class CollegeClass: NSObject
 {
@@ -15,14 +16,16 @@ class CollegeClass: NSObject
     var enrollment = ""
     var image = UIImage(named: "default")
     var webAdress = URL(string: "")
+    var coordinates = CLLocationCoordinate2D()
 
-    init(Name: String, Location: String, Enrollment: String, Image: UIImage, WebAdress: URL)
+    init(Name: String, Location: String, Enrollment: String, Image: UIImage, WebAdress: URL, Coordinates: CLLocationCoordinate2D)
     {
         name = Name
         location = Location
         enrollment = Enrollment
         image = Image
         webAdress = WebAdress
+        coordinates = Coordinates
     }
     
     init(Name: String, Location: String)

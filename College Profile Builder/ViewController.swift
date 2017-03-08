@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
@@ -19,11 +20,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myCollegeObject.append(CollegeClass(Name: "Harvard", Location: "Massachuchetes", Enrollment: "22,000", Image: UIImage(named: "harvard")!, WebAdress: URL(string: "https://www.harvard.edu")!))
+        myCollegeObject.append(CollegeClass(Name: "Harvard", Location: "Massachuchetes", Enrollment: "22,000", Image: UIImage(named: "harvard")!, WebAdress: URL(string: "https://www.harvard.edu")!, Coordinates: CLLocationCoordinate2D(latitude: 42.376876 , longitude: -71.116531)))
         
-        myCollegeObject.append(CollegeClass(Name: "Yale", Location: "Connecticut", Enrollment: "12,400", Image: UIImage(named: "yale")!, WebAdress: URL(string: "https://www.yale.edu")!))
+        myCollegeObject.append(CollegeClass(Name: "Yale", Location: "Connecticut", Enrollment: "12,400", Image: UIImage(named: "yale")!, WebAdress: URL(string: "https://www.yale.edu")!, Coordinates: CLLocationCoordinate2D(latitude: 41.316002 , longitude: -72.922214)))
         
-        myCollegeObject.append(CollegeClass(Name: "Oxford", Location: "United Kingdom", Enrollment: "22,600", Image: UIImage(named: "oxford")!, WebAdress: URL(string: "http://www.ox.ac.uk/")!))
+        myCollegeObject.append(CollegeClass(Name: "Oxford", Location: "United Kingdom", Enrollment: "22,600", Image: UIImage(named: "oxford")!, WebAdress: URL(string: "http://www.ox.ac.uk/")!, Coordinates: CLLocationCoordinate2D(latitude: 51.756422 , longitude: -1.254317)))
     }
 
     
@@ -85,7 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         let collegeTextField = alert.textFields?[0]
                         let locationTextField = alert.textFields?[1]
                         let urlTextField = alert.textFields?[2]
-                        self.myCollegeObject.append(CollegeClass(Name: (collegeTextField?.text)!, Location: (locationTextField?.text)!, Enrollment: "", Image: UIImage(named: "default")!, WebAdress: URL(string: (urlTextField?.text)!)!))
+                            self.myCollegeObject.append(CollegeClass(Name: (collegeTextField?.text)!, Location: (locationTextField?.text)!, Enrollment: "", Image: UIImage(named: "default")!, WebAdress: URL(string: (urlTextField?.text)!)!, Coordinates: CLLocationCoordinate2D()))
                         self.myTableView.reloadData()
                             
                         }

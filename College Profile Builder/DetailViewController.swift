@@ -17,6 +17,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var webAdressTextField: UITextField!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
     
     var detailCollege: CollegeClass!
     let imagePicker = UIImagePickerController()
@@ -32,11 +34,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         locationTextField.text = detailCollege.location
         enrollementTextField.text = detailCollege.enrollment
         webAdressTextField.text = detailCollege.webAdress?.absoluteString
+        latitudeTextField.text = String(detailCollege.coordinates.latitude)
+        longitudeTextField.text = String(detailCollege.coordinates.longitude)
         
     }
     
     @IBAction func saveButtonTapped(_ sender: Any)
     {
+        resignFirstResponder()
         detailCollege.name = nameTextField.text!
         detailCollege.image = imageView.image
         detailCollege.location = locationTextField.text!
@@ -70,7 +75,18 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imageView.image = selectedImage
         })
        
-        
     }
     
+    @IBAction func tapGesture(_ sender: Any)
+    {
+        resignFirstResponder()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let mapView = segue.destination as! MapViewController
+        mapView.mapCollegeClass = detailCollege
+    }
+
+
 }
