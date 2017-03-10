@@ -24,16 +24,6 @@ class MapViewController: UIViewController, UISearchBarDelegate
     var pointAnnotation: MKPointAnnotation!
     var pinAnnotationView: MKPinAnnotationView!
     
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
